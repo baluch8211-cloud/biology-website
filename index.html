@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>زیست یازدهم | تنظیم عصبی</title>
+<style>
+:root{--navy:#10283f;--blue:#176b87;--teal:#16a085;--mint:#e8f7f2;--ink:#203246;--muted:#68798a;--paper:#f4f8fb;--gold:#f3b84b;--line:#dce7ee}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.95}
+header{background:linear-gradient(125deg,#10283f,#176b87 68%,#16a085);color:white;padding:34px 20px 28px}
+.wrap{max-width:1080px;margin:auto;padding:0 18px}.topline{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.tag{border:1px solid #ffffff55;border-radius:30px;padding:4px 12px;font-size:13px;background:#ffffff12}
+h1{font-size:clamp(27px,5vw,43px);line-height:1.45;margin:18px 0 5px}header p{color:#d9edf4;margin:0;max-width:720px}
+.hero-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:25px}.hero-card{background:#ffffff14;border:1px solid #ffffff30;border-radius:16px;padding:12px 15px}.hero-card b{display:block;font-size:19px}
+nav{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 3px 14px #16344b0b}
+.navinner{display:flex;gap:8px;overflow:auto;padding:10px 18px;max-width:1080px;margin:auto}.navinner a{white-space:nowrap;text-decoration:none;color:var(--blue);padding:7px 12px;border-radius:10px;font-size:14px}.navinner a:hover{background:var(--mint)}
+main{padding:28px 0 55px}.section{background:white;border:1px solid var(--line);border-radius:20px;padding:23px;margin:0 0 20px;box-shadow:0 8px 24px #17344b08}
+h2{margin:0 0 15px;color:var(--navy);font-size:23px}h3{color:var(--blue);margin:20px 0 7px;font-size:18px}
+p{margin:8px 0}.lead{font-size:17px;color:#41576b}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}.info{background:#f1f8fb;border:1px solid #dcecf2;border-radius:15px;padding:15px}.tip{background:#fff8e8;border-right:4px solid var(--gold);border-radius:12px;padding:13px 15px;margin:14px 0}.testtip{background:#effaf6;border-right:4px solid var(--teal);border-radius:12px;padding:13px 15px;margin:14px 0}
+ul{padding-right:22px;margin:7px 0}li{margin:5px 0}
+table{width:100%;border-collapse:collapse;margin:12px 0;border-radius:12px;overflow:hidden}th,td{padding:11px;border:1px solid var(--line);text-align:right;vertical-align:top}th{background:#eaf4f8;color:var(--navy)}
+.diagram{display:flex;justify-content:center;align-items:center;gap:8px;flex-wrap:wrap;background:#f4f9fb;border-radius:16px;padding:18px;margin:14px 0}.node{background:white;border:1px solid #cfe0e8;border-radius:12px;padding:10px 14px;text-align:center;min-width:130px}.arrow{font-size:23px;color:var(--teal)}
+.quiz-q{border:1px solid var(--line);border-radius:15px;padding:15px;margin:13px 0}.quiz-q p{font-weight:bold;margin:0 0 9px}.option{display:block;padding:8px 10px;border-radius:9px;margin:5px 0;background:#f6f9fb;cursor:pointer}.option:hover{background:#eaf5f7}.option input{margin-left:8px;accent-color:var(--teal)}.feedback{font-size:14px;margin-top:8px;font-weight:bold}.correct{color:#12805e}.wrong{color:#b54735}
+button{border:0;border-radius:12px;background:var(--teal);color:white;padding:11px 18px;font:inherit;cursor:pointer;font-weight:bold}button:hover{filter:brightness(.95)}.secondary{background:#eaf3f7;color:var(--blue)}
+#result{font-weight:bold;margin:13px 0;padding:12px;border-radius:12px;background:#effaf6;display:none}
+footer{text-align:center;color:var(--muted);font-size:13px;padding:20px}
+@media(max-width:700px){.hero-cards,.grid2{grid-template-columns:1fr}.section{padding:17px}.hero-card{padding:10px}}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap">
+  <div class="topline"><span class="tag">زیست‌شناسی ۲ • پایه یازدهم</span><span class="tag">درسنامه تعاملی + نکات آزمونی</span></div>
+  <h1>تنظیم عصبی</h1>
+  <p>از یاخته‌های عصبی تا مغز، نخاع و پاسخ‌های انعکاسی؛ یادگیری مفهومی با مرور و خودآزمایی.</p>
+  <div class="hero-cards">
+   <div class="hero-card"><b>۲ گفتار</b><span>یاخته‌های بافت عصبی و ساختار دستگاه عصبی</span></div>
+   <div class="hero-card"><b>مرور مفهومی</b><span>تعریف‌ها، مسیرها و مقایسه‌های مهم</span></div>
+   <div class="hero-card"><b>آزمون پایانی</b><span>۱۰ پرسش چهارگزینه‌ای با بازخورد</span></div>
+  </div>
+ </div>
+</header>
+<nav><div class="navinner">
+ <a href="#intro">شروع</a><a href="#cells">گفتار اول</a><a href="#signal">پیام عصبی</a><a href="#cns">دستگاه مرکزی</a><a href="#pns">دستگاه محیطی</a><a href="#compare">جدول مقایسه</a><a href="#quiz">آزمون</a>
+</div></nav>
+<main class="wrap">
+<section class="section" id="intro">
+ <h2>نقشه راه فصل</h2>
+ <p class="lead">دستگاه عصبی با دریافت اطلاعات از محیط و درون بدن، پردازش آن‌ها و فرستادن پیام به اندام‌ها، در هماهنگی فعالیت‌های بدن نقش دارد.</p>
+ <div class="diagram">
+  <div class="node"><b>دستگاه عصبی</b></div><span class="arrow">←</span>
+  <div class="node"><b>مرکزی</b><br>مغز و نخاع</div><span class="arrow">+</span>
+  <div class="node"><b>محیطی</b><br>اعصاب مغزی و نخاعی</div>
+ </div>
+ <div class="tip"><b>نکته آزمونی:</b> فصل اول کتاب با عنوان «تنظیم عصبی» شامل دو گفتار «یاخته‌های بافت عصبی» و «ساختار دستگاه عصبی» است.</div>
+</section>
+
+<section class="section" id="cells">
+ <h2>گفتار اول: یاخته‌های بافت عصبی</h2>
+ <p>بافت عصبی از دو گروه اصلی تشکیل شده است: یاخته‌های عصبی (نورون‌ها) و یاخته‌های پشتیبان (نورگلیاها).</p>
+ <div class="grid2">
+  <div class="info"><h3>یاخته عصبی</h3><p>تحریک‌پذیر است، پیام عصبی ایجاد می‌کند، آن را در طول رشته عصبی هدایت می‌کند و به یاخته دیگر انتقال می‌دهد.</p></div>
+  <div class="info"><h3>یاخته پشتیبان</h3><p>به استقرار و پشتیبانی نورون‌ها کمک می‌کند، در دفاع و حفظ شرایط مناسب پیرامون آن‌ها نقش دارد و برخی از آن‌ها غلاف میلین می‌سازند.</p></div>
+ </div>
+ <h3>بخش‌های اصلی نورون</h3>
+ <ul>
+  <li><b>دارینه (دندریت):</b> پیام را دریافت می‌کند و به سوی جسم یاخته‌ای می‌برد.</li>
+  <li><b>جسم یاخته‌ای:</b> دارای هسته است و محل انجام سوخت‌وساز یاخته؛ می‌تواند پیام نیز دریافت کند.</li>
+  <li><b>آسه (آکسون):</b> پیام را از جسم یاخته‌ای به سوی پایانه آسه هدایت می‌کند.</li>
+  <li><b>پایانه آسه:</b> محل انتقال پیام به یاخته بعدی است.</li>
+ </ul>
+ <div class="diagram"><div class="node">دارینه<br><small>دریافت پیام</small></div><span class="arrow">←</span><div class="node">جسم یاخته‌ای<br><small>هسته و سوخت‌وساز</small></div><span class="arrow">→</span><div class="node">آسه و پایانه<br><small>هدایت و انتقال</small></div></div>
+ <div class="testtip"><b>نکته:</b> جهت کلی انتقال پیام در یک نورون معمولاً از دارینه و جسم یاخته‌ای به سمت آسه و پایانه آن است.</div>
+ <h3>انواع نورون از نظر کار</h3>
+ <table><thead><tr><th>نوع نورون</th><th>جهت یا نقش پیام</th></tr></thead><tbody>
+ <tr><td>حسی</td><td>پیام را از گیرنده‌ها به سوی دستگاه عصبی مرکزی می‌آورد.</td></tr>
+ <tr><td>حرکتی</td><td>پیام را از دستگاه عصبی مرکزی به اندام‌های پاسخ‌دهنده مانند ماهیچه‌ها می‌برد.</td></tr>
+ <tr><td>رابط</td><td>در مغز و نخاع قرار دارد و ارتباط میان نورون‌ها را برقرار می‌کند.</td></tr>
+ </tbody></table>
+ <div class="tip"><b>دام رایج:</b> نورون رابط در دستگاه عصبی مرکزی قرار دارد؛ نورون حسی پیام را به مرکز می‌آورد و نورون حرکتی پیام را از مرکز دور می‌کند.</div>
+</section>
+
+<section class="section" id="signal">
+ <h2>ایجاد و انتقال پیام عصبی</h2>
+ <h3>پتانسیل آرامش</h3>
+ <p>در حالت استراحت نورون، دو سوی غشا اختلاف پتانسیل دارند؛ مقدار معمول آن در کتاب حدود ۷۰- میلی‌ولت بیان شده است. در این وضعیت، سدیم در بیرون یاخته و پتاسیم درون یاخته فراوان‌تر است.</p>
+ <ul>
+  <li>کانال‌های نشتی امکان عبور یون‌ها را فراهم می‌کنند؛ غشا به پتاسیم نفوذپذیری بیشتری دارد.</li>
+  <li>پمپ سدیم ـ پتاسیم با مصرف ATP، در هر چرخه سه یون سدیم را خارج و دو یون پتاسیم را وارد می‌کند.</li>
+ </ul>
+ <h3>پتانسیل عمل</h3>
+ <p>با تحریک نورون، ابتدا کانال‌های دریچه‌دار سدیمی باز می‌شوند و ورود سدیم، درون یاخته را مثبت‌تر می‌کند. سپس کانال‌های سدیمی بسته و کانال‌های دریچه‌دار پتاسیمی باز می‌شوند؛ خروج پتاسیم به بازگشت اختلاف پتانسیل به وضعیت آرامش کمک می‌کند.</p>
+ <div class="testtip"><b>حفظی مهم:</b> ابتدا ورود Na⁺ و سپس خروج K⁺؛ پمپ سدیم ـ پتاسیم نیز در بازگرداندن توزیع یون‌ها به وضعیت آرامش نقش دارد.</div>
+ <h3>غلاف میلین و گره رانویه</h3>
+ <p>غلاف میلین عایق رشته عصبی است. در محل گره‌های رانویه میلین وجود ندارد و پتانسیل عمل در این نواحی ایجاد می‌شود؛ پیام در رشته میلین‌دار از گره‌ای به گره دیگر می‌جهد. این شیوه «هدایت جهشی» نام دارد و سرعت هدایت را افزایش می‌دهد.</p>
+ <h3>همایه (سیناپس)</h3>
+ <p>نورون‌ها در محل همایه به هم ارتباط دارند. با رسیدن پیام به پایانه آسه، ریزکیسه‌ها ناقل عصبی را در فضای همایه آزاد می‌کنند. ناقل به گیرنده‌های یاخته پس‌همایه‌ای متصل می‌شود و می‌تواند آن را تحریک یا مهار کند. ناقل باقی‌مانده با جذب دوباره یا تجزیه آنزیمی از فضای همایه پاک می‌شود.</p>
+</section>
+
+<section class="section" id="cns">
+ <h2>گفتار دوم: ساختار دستگاه عصبی</h2>
+ <h3>دستگاه عصبی مرکزی</h3>
+ <p>دستگاه عصبی مرکزی از <b>مغز و نخاع</b> تشکیل شده و مرکز نظارت و پردازش اطلاعات بدن است.</p>
+ <div class="grid2">
+  <div class="info"><h3>ماده خاکستری</h3><p>شامل جسم یاخته‌های عصبی و رشته‌های عصبی بدون میلین است.</p></div>
+  <div class="info"><h3>ماده سفید</h3><p>از اجتماع رشته‌های عصبی میلین‌دار تشکیل شده است.</p></div>
+ </div>
+ <div class="tip"><b>نکته مقایسه‌ای:</b> در مغز، ماده خاکستری بیشتر در بخش بیرونی و ماده سفید در بخش درونی قرار دارد؛ در نخاع آرایش برعکس است.</div>
+ <h3>حفاظت از مغز و نخاع</h3>
+ <p>جمجمه و ستون مهره‌ها، پرده‌های مننژ و مایع مغزی ـ نخاعی از دستگاه عصبی مرکزی محافظت می‌کنند. مایع مغزی ـ نخاعی مانند ضربه‌گیر عمل می‌کند. سد خونی ـ مغزی نیز ورود بسیاری از مواد و میکروب‌ها را محدود می‌کند؛ برخی مواد ضروری مانند اکسیژن و گلوکز می‌توانند از آن عبور کنند.</p>
+ <h3>بخش‌های مهم مغز</h3>
+ <table><thead><tr><th>بخش</th><th>نقش‌های مهم</th></tr></thead><tbody>
+ <tr><td>مخ و قشر مخ</td><td>پردازش نهایی اطلاعات، یادگیری، تفکر و عملکرد هوشمندانه؛ دارای بخش‌های حسی، حرکتی و ارتباطی.</td></tr>
+ <tr><td>مخچه</td><td>تنظیم وضعیت بدن و تعادل و هماهنگی حرکات.</td></tr>
+ <tr><td>مغز میانی</td><td>مشارکت در فعالیت‌هایی مانند بینایی، شنوایی و حرکت.</td></tr>
+ <tr><td>پل مغزی</td><td>نقش در تنظیم فعالیت‌هایی مانند تنفس و ترشح بزاق و اشک.</td></tr>
+ <tr><td>بصل‌النخاع</td><td>تنظیم فشار خون، ضربان قلب و تنفس؛ مرکز برخی انعکاس‌ها مانند عطسه، بلع و سرفه.</td></tr>
+ <tr><td>تالاموس</td><td>پردازش اولیه و تقویت بسیاری از اطلاعات حسی پیش از ارسال به قشر مخ.</td></tr>
+ <tr><td>هیپوتالاموس</td><td>تنظیم دمای بدن، گرسنگی، تشنگی، خواب، ضربان قلب و فشار خون.</td></tr>
+ <tr><td>سامانه کناری و اسبک مغز</td><td>سامانه کناری در حافظه و احساسات نقش دارد؛ اسبک مغز در یادگیری و تشکیل حافظه مؤثر است.</td></tr>
+ </tbody></table>
+ <h3>نخاع</h3>
+ <p>نخاع درون ستون مهره‌ها قرار دارد، مغز را به دستگاه عصبی محیطی متصل می‌کند و مسیر عبور پیام‌های حسی و حرکتی است. همچنین مرکز برخی انعکاس‌هاست. ریشه پشتی عصب نخاعی حسی و ریشه شکمی آن حرکتی است.</p>
+</section>
+
+<section class="section" id="pns">
+ <h2>دستگاه عصبی محیطی</h2>
+ <p>دستگاه عصبی محیطی، مغز و نخاع را به بخش‌های دیگر بدن مرتبط می‌کند. این دستگاه شامل ۱۲ جفت عصب مغزی و ۳۱ جفت عصب نخاعی است و بخش‌های حسی و حرکتی دارد.</p>
+ <h3>بخش حرکتی</h3>
+ <div class="grid2">
+  <div class="info"><h3>بخش پیکری</h3><p>پیام‌ها را به ماهیچه‌های اسکلتی می‌رساند. فعالیت این ماهیچه‌ها می‌تواند ارادی یا در قالب پاسخ انعکاسی باشد.</p></div>
+  <div class="info"><h3>بخش خودمختار</h3><p>فعالیت ماهیچه‌های صاف، ماهیچه قلب و غده‌ها را به‌صورت غیرارادی تنظیم می‌کند.</p></div>
+ </div>
+ <h3>قوس انعکاسی</h3>
+ <p>انعکاس، پاسخ سریع و غیرارادی به محرک است. در نمونه عقب‌کشیدن دست از جسم داغ، پیام از گیرنده پوست به نخاع می‌رود و پیام حرکتی به ماهیچه‌ها بازمی‌گردد؛ مرکز این انعکاس نخاع است.</p>
+ <div class="diagram"><div class="node">گیرنده پوست</div><span class="arrow">←</span><div class="node">نورون حسی</div><span class="arrow">←</span><div class="node">نخاع<br><small>مرکز انعکاس</small></div><span class="arrow">→</span><div class="node">نورون حرکتی</div><span class="arrow">→</span><div class="node">ماهیچه</div></div>
+ <h3>دستگاه خودمختار: آسمپاتیک و پادآسمپاتیک</h3>
+ <table><thead><tr><th>اندام / فعالیت</th><th>آسمپاتیک</th><th>پادآسمپاتیک</th></tr></thead><tbody>
+ <tr><td>مردمک چشم</td><td>گشاد می‌کند</td><td>تنگ می‌کند</td></tr>
+ <tr><td>قلب</td><td>ضربان را افزایش می‌دهد</td><td>ضربان را کاهش می‌دهد</td></tr>
+ <tr><td>نایژه‌ها</td><td>گشاد می‌کند</td><td>تنگ می‌کند</td></tr>
+ <tr><td>دستگاه گوارش</td><td>فعالیت را مهار می‌کند</td><td>فعالیت را تحریک می‌کند</td></tr>
+ <tr><td>مثانه</td><td>به استراحت ماهیچه مثانه کمک می‌کند</td><td>انقباض و تخلیه را تحریک می‌کند</td></tr>
+ </tbody></table>
+ <div class="testtip"><b>کلید یادآوری:</b> آسمپاتیک بدن را برای فعالیت و وضعیت آماده‌باش آماده می‌کند؛ پادآسمپاتیک بیشتر با حالت آرامش و فعالیت گوارشی همراه است. این دو معمولاً اثرهای مخالف دارند.</div>
+</section>
+
+<section class="section" id="compare">
+ <h2>جدول جمع‌بندی و مقایسه‌های مهم</h2>
+ <table><thead><tr><th>موضوع</th><th>مورد اول</th><th>مورد دوم</th><th>نکته کلیدی</th></tr></thead><tbody>
+ <tr><td>ماده عصبی</td><td>خاکستری: جسم یاخته و رشته بدون میلین</td><td>سفید: رشته میلین‌دار</td><td>آرایش مغز و نخاع متفاوت است.</td></tr>
+ <tr><td>ریشه عصب نخاعی</td><td>پشتی: حسی</td><td>شکمی: حرکتی</td><td>جهت ورود و خروج پیام را به خاطر بسپار.</td></tr>
+ <tr><td>نورون</td><td>حسی: به سوی مرکز</td><td>حرکتی: از مرکز به اندام</td><td>نورون رابط میان نورون‌ها ارتباط برقرار می‌کند.</td></tr>
+ <tr><td>دستگاه خودمختار</td><td>آسمپاتیک: آماده‌باش</td><td>پادآسمپاتیک: آرامش</td><td>اغلب اثرهای مخالف دارند.</td></tr>
+ <tr><td>هدایت پیام</td><td>بدون میلین: پیوسته‌تر</td><td>با میلین: جهشی</td><td>هدایت جهشی سریع‌تر است.</td></tr>
+ </tbody></table>
+</section>
+
+<section class="section" id="quiz">
+ <h2>آزمون چهارگزینه‌ای</h2>
+ <p>گزینه درست را انتخاب کن؛ پس از هر پاسخ، بازخورد همان پرسش نمایش داده می‌شود.</p>
+ <div id="questions"></div>
+ <button onclick="gradeQuiz()">محاسبه نتیجه آزمون</button>
+ <button class="secondary" onclick="resetQuiz()">شروع دوباره</button>
+ <div id="result"></div>
+</section>
+<section class="section">
+ <h2>منبع و شیوه استفاده</h2>
+ <p>این درسنامه، بازنویسی آموزشی و خلاصه‌سازی‌شده بر پایه فصل اول کتاب «زیست‌شناسی (۲) پایه یازدهم» با عنوان «تنظیم عصبی» است. برای جزئیات شکل‌ها، فعالیت‌ها و متن کامل، به کتاب رسمی مراجعه شود.</p>
+ <p><a href="https://www.roshd.ir/olum/Content/کتاب-زیست-شناسی-2-پایه-یازدهم" target="_blank" rel="noopener">معرفی کتاب در پایگاه رشد</a></p>
+</section>
+</main>
+<footer>وب‌سایت آموزشی زیست یازدهم • نسخه آزمایشی ۱ • قابل اجرا به‌صورت آفلاین</footer>
+<script>
+const qs=[
+ {q:"کدام بخش نورون پیام را از جسم یاخته‌ای به سوی پایانه هدایت می‌کند؟",o:["دارینه","آسه","هسته","غلاف میلین"],a:1,e:"آسه پیام را از جسم یاخته‌ای به سوی پایانه آسه هدایت می‌کند."},
+ {q:"نورون‌های رابط معمولاً در کدام بخش قرار دارند؟",o:["پوست","ماهیچه","مغز و نخاع","اندام‌های حسی"],a:2,e:"نورون‌های رابط در دستگاه عصبی مرکزی قرار دارند."},
+ {q:"در هر چرخه پمپ سدیم ـ پتاسیم چه اتفاقی می‌افتد؟",o:["۲ سدیم خارج و ۳ پتاسیم وارد می‌شود","۳ سدیم خارج و ۲ پتاسیم وارد می‌شود","۳ سدیم وارد و ۲ پتاسیم خارج می‌شود","سدیم و پتاسیم هر دو وارد می‌شوند"],a:1,e:"پمپ با مصرف ATP، سه یون سدیم را خارج و دو یون پتاسیم را وارد می‌کند."},
+ {q:"در آغاز پتانسیل عمل، کدام یون عمدتاً وارد نورون می‌شود؟",o:["سدیم","پتاسیم","کلسیم فقط","کلر"],a:0,e:"ابتدا کانال‌های دریچه‌دار سدیمی باز و سدیم وارد یاخته می‌شود."},
+ {q:"هدایت جهشی در کدام رشته رخ می‌دهد؟",o:["رشته بدون میلین","رشته میلین‌دار","فقط دارینه‌های بدون میلین","همه رشته‌ها به یک شکل"],a:1,e:"در رشته میلین‌دار، پیام از یک گره رانویه به گره بعدی هدایت می‌شود."},
+ {q:"ماده سفید دستگاه عصبی عمدتاً از چه چیزی تشکیل شده است؟",o:["جسم یاخته‌ها","رشته‌های عصبی میلین‌دار","یاخته‌های خونی","مایع مغزی نخاعی"],a:1,e:"ماده سفید اجتماع رشته‌های عصبی میلین‌دار است."},
+ {q:"کدام گزینه درباره ریشه‌های عصب نخاعی درست است؟",o:["پشتی حرکتی و شکمی حسی","هر دو حسی‌اند","پشتی حسی و شکمی حرکتی","هر دو حرکتی‌اند"],a:2,e:"ریشه پشتی پیام حسی را وارد نخاع می‌کند و ریشه شکمی پیام حرکتی را خارج می‌کند."},
+ {q:"مرکز انعکاس عقب‌کشیدن دست از جسم داغ کدام است؟",o:["مخچه","قشر مخ","نخاع","تالاموس"],a:2,e:"در نمونه کتاب، مرکز تنظیم این انعکاس نخاع است."},
+ {q:"کدام بخش مغز در تنظیم تعادل و وضعیت بدن نقش اصلی دارد؟",o:["مخچه","تالاموس","بصل‌النخاع","هیپوتالاموس"],a:0,e:"مخچه در تنظیم تعادل و هماهنگی حرکات نقش دارد."},
+ {q:"کدام اثر با فعالیت پادآسمپاتیک سازگارتر است؟",o:["افزایش ضربان قلب","گشاد شدن مردمک","افزایش فعالیت گوارش","گشاد شدن نایژه‌ها"],a:2,e:"پادآسمپاتیک معمولاً فعالیت گوارش را تحریک و ضربان قلب را کاهش می‌دهد."}
+];
+const host=document.getElementById('questions');
+function render(){host.innerHTML=qs.map((q,i)=>`<div class="quiz-q" data-q="${i}"><p>${i+1}. ${q.q}</p>${q.o.map((v,j)=>`<label class="option"><input type="radio" name="q${i}" value="${j}" onchange="feedback(${i},${j})">${v}</label>`).join('')}<div class="feedback" id="f${i}"></div></div>`).join('');}
+function feedback(i,j){const f=document.getElementById('f'+i);if(j===qs[i].a){f.className='feedback correct';f.textContent='درست است. '+qs[i].e;}else{f.className='feedback wrong';f.textContent='این گزینه درست نیست. دوباره به مفهوم مربوط فکر کن.';}}
+function gradeQuiz(){let score=0,answered=0;qs.forEach((q,i)=>{const v=document.querySelector(`input[name="q${i}"]:checked`);if(v){answered++;if(+v.value===q.a)score++;}});const r=document.getElementById('result');r.style.display='block';r.textContent=`نتیجه: ${score} پاسخ درست از ${qs.length} پرسش | پاسخ داده‌شده: ${answered} از ${qs.length}`;}
+function resetQuiz(){render();const r=document.getElementById('result');r.style.display='none';r.textContent='';}
+render();
+</script>
+</body></html>
